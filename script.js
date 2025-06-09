@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Panggil fungsi untuk setup form kontak
     setupContactForm();
 });
+
 // ===== KODE UNTUK FORM KONTAK =====
 // Fungsi untuk menangani submit form dan menampilkan output
 function setupContactForm() {
@@ -69,9 +70,18 @@ function setupContactForm() {
             // Ambil nilai dari input
             const name = document.getElementById('name').value;
             const email = document.getElementById('email') ? document.getElementById('email').value : '';
-            const date = document.getElementById('date') ? document.getElementById('date').value : '';
-            const address = document.getElementById('address') ? document.getElementById('address').value : '';
             const message = document.getElementById('message') ? document.getElementById('message').value : '';
+            
+            // Validasi form
+            if (!name) {
+                alert('Nama harus diisi!');
+                return;
+            }
+            
+            if (email && !validateEmail(email)) {
+                alert('Email tidak valid!');
+                return;
+            }
             
             // Buat output HTML
             let outputHTML = '';
@@ -88,32 +98,6 @@ function setupContactForm() {
                 outputHTML += `
                     <div class="output-item">
                         <strong>Email:</strong> ${email}
-                    </div>
-                `;
-            }
-            
-            // Tambahkan tanggal jika ada
-            if (date) {
-                // Format tanggal agar lebih mudah dibaca
-                const formattedDate = new Date(date).toLocaleDateString('id-ID', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-                
-                outputHTML += `
-                    <div class="output-item">
-                        <strong>Tanggal:</strong> ${formattedDate}
-                    </div>
-                `;
-            }
-            
-            // Tambahkan alamat jika ada
-            if (address) {
-                outputHTML += `
-                    <div class="output-item">
-                        <strong>Alamat:</strong> ${address}
                     </div>
                 `;
             }
@@ -135,6 +119,13 @@ function setupContactForm() {
         });
     }
 }
+
+// Fungsi untuk validasi email
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 // ===== KODE UNTUK ANIMASI FADE-IN SAAT SCROLL =====
 function setupScrollAnimations() {
     // Ambil semua elemen dengan class fade-in
@@ -186,6 +177,20 @@ function setupScrollToTop() {
     checkScrollPosition();
 }
 
+// ===== KODE UNTUK WELCOME MESSAGE =====
+function setupWelcomeMessage() {
+    const userNameElement = document.getElementById('userName');
+    if (userNameElement) {
+        // Prompt user for their name
+        let name = prompt("Masukkan nama Anda:", "");
+        
+        // If user entered a name, display it
+        if (name && name.trim() !== "") {
+            userNameElement.textContent = name;
+        }
+    }
+}
+
 // Panggil semua fungsi setup saat DOM sudah dimuat
 document.addEventListener('DOMContentLoaded', function() {
     // Fungsi yang sudah ada
@@ -194,21 +199,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fungsi baru
     setupScrollAnimations();
     setupScrollToTop();
+    setupWelcomeMessage();
 });
+
 // ===== KODE UNTUK HEADER INTERAKTIF =====
 function setupHeader() {
     const header = document.querySelector('.sticky-header');
     const themeToggle = document.querySelector('.theme-toggle');
-    
-    // Cek preferensi tema dari localStorage
-    const isLightTheme = localStorage.getItem('lightTheme') === 'true';
-    if (isLightTheme) {
-        document.body.classList.add('light-theme');
-        themeToggle.classList.add('active');
-        const icon = themeToggle.querySelector('i');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
     
     // Fungsi untuk mengubah tampilan header saat scroll
     function updateHeaderOnScroll() {
@@ -226,11 +223,15 @@ function setupHeader() {
     // Fungsi untuk toggle tema gelap/terang
     function toggleTheme() {
         themeToggle.classList.toggle('active');
-        document.body.classList.toggle('light-theme');
         
-        // Simpan preferensi tema di localStorage
-        const isLightTheme = document.body.classList.contains('light-theme');
-        localStorage.setItem('lightTheme', isLightTheme);
+        // Hanya ubah background utama
+        if (themeToggle.classList.contains('active')) {
+            document.body.style.backgroundColor = '#f5f5f5';
+            document.body.style.backgroundImage = 'linear-gradient(to bottom right, #f5f5f5, #e0e0e0)';
+        } else {
+            document.body.style.backgroundColor = '#121212';
+            document.body.style.backgroundImage = 'linear-gradient(to bottom right, #121212, #2d2d2d)';
+        }
         
         // Animasi toggle icon
         const icon = themeToggle.querySelector('i');
@@ -276,10 +277,12 @@ function setupHeader() {
     
     window.addEventListener('scroll', highlightActiveSection);
 }
+
 // Panggil fungsi setupHeader saat DOM sudah dimuat
 document.addEventListener('DOMContentLoaded', function() {
     setupHeader();
 });
+
 // ===== KODE UNTUK MENU MOBILE =====
 function setupMobileMenu() {
     const menuToggle = document.getElementById('menuToggle');

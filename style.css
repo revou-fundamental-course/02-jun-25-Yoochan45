@@ -1164,3 +1164,194 @@ body.light-theme .contact-form {
     background-color: inherit;
     background-image: inherit;
 }
+/* Tema terang/gelap */
+body {
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+body.light-theme {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+}
+
+/* Mempertahankan warna gelap pada elemen */
+body.light-theme .content-section {
+    background-color: #1e1e1e;
+}
+
+body.light-theme .blue-boxes {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+
+body.light-theme .metal-box {
+    background: linear-gradient(145deg, #2d2d2d, #3d3d3d);
+    color: #e0e0e0;
+}
+
+body.light-theme .avatar-section {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+body.light-theme .form-output {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light-theme .contact-form {
+    color: #e0e0e0;
+}
+
+body.light-theme p, 
+body.light-theme h2, 
+body.light-theme h3, 
+body.light-theme .about-text, 
+body.light-theme .project-text {
+    color: #f3f4f6;
+}
+/* Tema terang/gelap */
+body {
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+body.light-theme {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+}
+
+/* Mempertahankan warna gelap pada semua kontainer */
+body.light-theme .content-section {
+    background-color: #1e1e1e;
+}
+
+body.light-theme .blue-boxes {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+
+body.light-theme .metal-box {
+    background: linear-gradient(145deg, #2d2d2d, #3d3d3d);
+    color: #e0e0e0;
+}
+
+body.light-theme .avatar-section {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+body.light-theme .form-output {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light-theme .contact-form {
+    color: #e0e0e0;
+}
+
+body.light-theme .about-project-container,
+body.light-theme .contact-container,
+body.light-theme .feature-list,
+body.light-theme .skill-badges,
+body.light-theme .project-links {
+    color: #e0e0e0;
+}
+
+body.light-theme p, 
+body.light-theme h2, 
+body.light-theme h3, 
+body.light-theme .about-text, 
+body.light-theme .project-text,
+body.light-theme li,
+body.light-theme label {
+    color: #f3f4f6;
+}
+
+/* Memastikan semua section tetap gelap */
+body.light-theme #section1,
+body.light-theme #section2,
+body.light-theme #section3,
+body.light-theme #about-me,
+body.light-theme #vision-mission,
+body.light-theme #skills,
+body.light-theme #journey,
+body.light-theme #contact {
+    background-color: #1e1e1e;
+}
+/* Perbaikan tema terang */
+body.light-theme .content-section {
+    background-color: #1e1e1e !important;
+    color: #f3f4f6 !important;
+}
+
+body.light-theme .content-section h2,
+body.light-theme .content-section h3,
+body.light-theme .content-section p,
+body.light-theme .content-section li,
+body.light-theme .content-section label {
+    color: #f3f4f6 !important;
+}
+
+body.light-theme .about-text,
+body.light-theme .project-text {
+    color: #e0e0e0 !important;
+}
+
+/* Memastikan form tetap terlihat */
+body.light-theme .form-group input, 
+body.light-theme .form-group textarea {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
+}
+/* Tema terang yang benar */
+body.light-theme {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+}
+
+/* Mengubah warna teks menjadi hitam di mode terang */
+body.light-theme .content-section {
+    color: #333333;
+}
+
+body.light-theme .content-section h2,
+body.light-theme .content-section h3,
+body.light-theme .content-section p,
+body.light-theme .content-section li,
+body.light-theme .content-section label {
+    color: #333333;
+}
+
+/* Mempertahankan warna teks di container berwarna */
+body.light-theme .blue-boxes,
+body.light-theme .blue-boxes h3,
+body.light-theme .blue-boxes p,
+body.light-theme .blue-boxes li {
+    color: white;
+}
+
+body.light-theme .avatar-section,
+body.light-theme .avatar-section h3,
+body.light-theme .avatar-section p {
+    color: white;
+}
+
+body.light-theme .metal-box {
+    color: #e0e0e0;
+}
+
+/* Mempertahankan warna teks di skill badges */
+body.light-theme .skill-badge {
+    color: white;
+}
+/* Reset tema terang */
+body.light-theme .content-section {
+    background-color: #1e1e1e !important;
+}
+
+body.light-theme .content-section h2,
+body.light-theme .content-section h3,
+body.light-theme .content-section p,
+body.light-theme .content-section li,
+body.light-theme .content-section label,
+body.light-theme .about-text,
+body.light-theme .project-text {
+    color: #f3f4f6 !important;
+}
