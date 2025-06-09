@@ -122,7 +122,7 @@ function setupContactForm() {
 
 // Fungsi untuk validasi email
 function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
 
@@ -177,20 +177,6 @@ function setupScrollToTop() {
     checkScrollPosition();
 }
 
-// ===== KODE UNTUK WELCOME MESSAGE =====
-function setupWelcomeMessage() {
-    const userNameElement = document.getElementById('userName');
-    if (userNameElement) {
-        // Prompt user for their name
-        let name = prompt("Masukkan nama Anda:", "");
-        
-        // If user entered a name, display it
-        if (name && name.trim() !== "") {
-            userNameElement.textContent = name;
-        }
-    }
-}
-
 // Panggil semua fungsi setup saat DOM sudah dimuat
 document.addEventListener('DOMContentLoaded', function() {
     // Fungsi yang sudah ada
@@ -199,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fungsi baru
     setupScrollAnimations();
     setupScrollToTop();
-    setupWelcomeMessage();
 });
 
 // ===== KODE UNTUK HEADER INTERAKTIF =====
