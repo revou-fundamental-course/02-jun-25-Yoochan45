@@ -16,26 +16,31 @@
                 <i class="fas fa-code"></i>
                 <h1>Yoo's Space</h1>
             </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="navMenu">
                     <li>
                         <a href="index.html" class="nav-link">
-                            <i class="fas fa-home"></i> Dashboard
+                            <i class="fas fa-home"></i> <span class="nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#section1" class="nav-link">
-                            <i class="fas fa-user"></i> About
+                        <a href="profile.html" class="nav-link">
+                            <i class="fas fa-user"></i> <span class="nav-text">My Profile</span>
                         </a>
                     </li>
                     <li>
                         <a href="#section2" class="nav-link">
-                            <i class="fas fa-briefcase"></i> Projects
+                            <i class="fas fa-briefcase"></i> <span class="nav-text">Projects</span>
                         </a>
                     </li>
                     <li>
                         <a href="#section3" class="nav-link">
-                            <i class="fas fa-envelope"></i> Contact
+                            <i class="fas fa-envelope"></i> <span class="nav-text">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -64,7 +69,7 @@
         <div class="avatar-section">
             <img src="assets/avatar.jpg" alt="avatar" class="avatar">
             <h2>Welcome to Yoo's Space</h2>
-            <p><b>I'm a Future Developer</b></p>
+            <p><b>Hi <span id="userName">Friend</span>! I'm a Future Developer</b></p>
         </div>
         
         <div class="blue-boxes right-box">
@@ -76,21 +81,21 @@
 
     <div class="metal-container">
         <a href="#section1" class="metal-box">
-            <span>Tentang Saya</span>
+            <span>About Me</span>
         </a>
         <a href="#section2" class="metal-box">
-            <span>Proyek</span>
+            <span>Project</span>
         </a>
         <a href="#section3" class="metal-box">
-            <span>Kontak</span>
+            <span>Message Us</span>
         </a>
         <a href="#section4" class="metal-box">
-            <span>Komentar</span>
+            <span>Contact</span>
         </a>
     </div>
     
     <section id="section1" class="content-section fade-in">
-        <h2>Tentang Saya</h2>
+        <h2>About Me</h2>
         <div class="about-project-container">
             <div class="about-image">
                 <img src="assets/about-me.jpg" alt="Tentang Saya">
@@ -112,7 +117,7 @@
     </section>
     
     <section id="section2" class="content-section fade-in">
-        <h2>Proyek</h2>
+        <h2>Project</h2>
         <div class="about-project-container">
             <div class="project-text">
                 <h3>Website Portfolio <span class="project-badge">New</span></h3>
@@ -139,7 +144,7 @@
     </section>
     
     <section id="section3" class="content-section fade-in">
-        <h2>Kontak</h2>
+        <h2>Message Us</h2>
         <div class="contact-container">
             <div class="contact-form">
                 <div class="form-header">
@@ -153,13 +158,13 @@
                         <span class="input-focus-effect"></span>
                     </div>
                     <div class="form-group">
-                        <label for="date">Tanggal</label>
-                        <input type="date" id="date" name="date" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
                         <span class="input-focus-effect"></span>
                     </div>
                     <div class="form-group">
-                        <label for="address">Alamat</label>
-                        <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat Anda" required></textarea>
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Masukkan pesan Anda" required></textarea>
                         <span class="input-focus-effect"></span>
                     </div>
                     <button type="submit" class="submit-btn">
@@ -186,9 +191,9 @@
                 Yoo's Space
             </div>
             <div class="footer-links">
-                <a href="#section1">Tentang</a>
-                <a href="#section2">Proyek</a>
-                <a href="#section3">Kontak</a>
+                <a href="#section1">About Me</a>
+                <a href="#section2">Project</a>
+                <a href="#section3">Message Us</a>
                 <a href="https://revou.co" target="_blank">RevoU</a>
             </div>
         </div>

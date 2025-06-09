@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Yoo's Space</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <i class="fas fa-code"></i>
+                <h1>Yoo's Space</h1>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="nav-link active-link">
+                            <i class="fas fa-user"></i> <span class="nav-text">My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#section2" class="nav-link">
+                            <i class="fas fa-briefcase"></i> <span class="nav-text">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#section3" class="nav-link">
+                            <i class="fas fa-envelope"></i> <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <div class="slider">
+        <button class="prev">&#10094;</button>
+        <img class="slide" src="assets/gambar1.jpg" alt="slide1">
+        <img class="slide" src="assets/gambar2.jpg" alt="slide2">
+        <button class="next">&#10095;</button>
+    </div>
+    
+    <!-- Metal Navigation -->
+    <div class="metal-container">
+        <a href="#about-me" class="metal-box">
+            <span>About Me</span>
+        </a>
+        <a href="#vision-mission" class="metal-box">
+            <span>Vision & Mission</span>
+        </a>
+        <a href="#skills" class="metal-box">
+            <span>Skills</span>
+        </a>
+        <a href="#journey" class="metal-box">
+            <span>My Journey</span>
+        </a>
+        <a href="#contact" class="metal-box">
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="content-section fade-in">
+        <h2>Tentang Aisiya Qutwatunnada</h2>
+        <div class="about-project-container">
+            <div class="about-image">
+                <img src="assets/avatar.jpg" alt="Aisiya Qutwatunnada">
+                <div class="image-overlay">
+                    <span>That's Me!</span>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Hai! Aku Aisiya Qutwatunnada <span class="wave">👋</span></h3>
+                <p>Lulusan jurusan Ekonomi yang dulu sering ngerasa salah jurusan 😩 tapi akhirnya nemu passion baru di dunia teknologi, programming, dan desain. Walau awalnya nyasar, sekarang aku lagi serius banget belajar buat jadi AI & Fullstack Developer — bahkan pengen banget kerja di Google, Microsoft, atau OpenAI (aminin, pliss 😭).</p>
+                <p>Aku bukan dari latar belakang teknik, tapi aku percaya usaha dan konsistensi bisa ngalahin jurusan. Saat ini aku lagi belajar Python, JavaScript, backend, dan AI lewat berbagai kursus online kaya Coursera, RevoU, dan Dicoding. Targetku? Ulang kuliah ambil Teknik Informatika dan lanjut S2 di Eropa.</p>
+                <div class="skill-badges">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">AI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="content-section fade-in">
+        <h2>Visi & Misi</h2>
+        <div class="three-column-layout">
+            <div class="blue-boxes left-box">
+                <h3>Visi Hidupku</h3>
+                <p>"Dari pesantren ke Silicon Valley."</p>
+                <p>Aku pengen buktiin kalau siapa pun bisa sukses di dunia teknologi, asal niat & mau belajar dari nol.</p>
+            </div>
+            
+            <div class="avatar-section">
+                <img src="assets/avatar.jpg" alt="Journey" class="avatar">
+                <h3>My Journey</h3>
+                <p><b>From Economics to Tech</b></p>
+            </div>
+            
+            <div class="blue-boxes right-box">
+                <h3>Misi Hidupku</h3>
+                <ul class="feature-list">
+                    <li><span class="feature-icon">🚀</span> Belajar coding dan AI biar bisa kerja di top tech company</li>
+                    <li><span class="feature-icon">🏫</span> Nabung buat bikin sekolah & panti asuhan teknologi di daerah</li>
+                    <li><span class="feature-icon">💼</span> Buka lapangan kerja buat anak-anak muda berbakat</li>
+                    <li><span class="feature-icon">🇮🇩</span> Bangun Indonesia lewat teknologi dan pendidikan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="content-section fade-in">
+        <h2>My Skills</h2>
+        <div class="flex-container">
+            <div class="blue-boxes">
+                <h3><i class="fas fa-code"></i> Programming</h3>
+                <div class="skill-badges">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">React</span>
+                </div>
+            </div>
+            <div class="blue-boxes">
+                <h3><i class="fas fa-brain"></i> AI & Data</h3>
+                <div class="skill-badges">
+                    <span class="skill-badge">Machine Learning</span>
+                    <span class="skill-badge">Data Analysis</span>
+                    <span class="skill-badge">TensorFlow</span>
+                </div>
+            </div>
+            <div class="blue-boxes">
+                <h3><i class="fas fa-palette"></i> Design</h3>
+                <div class="skill-badges">
+                    <span class="skill-badge">UI/UX</span>
+                    <span class="skill-badge">Figma</span>
+                    <span class="skill-badge">Responsive Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="content-section fade-in">
+        <h2>My Journey</h2>
+        <div class="flex-container">
+            <div class="blue-boxes">
+                <h3>2020</h3>
+                <h4>Lulusan Ekonomi</h4>
+                <p>Menyelesaikan kuliah jurusan Ekonomi namun merasa ada yang kurang</p>
+            </div>
+            <div class="blue-boxes">
+                <h3>2021</h3>
+                <h4>Menemukan Passion di Teknologi</h4>
+                <p>Mulai belajar coding dan menemukan passion baru di dunia teknologi</p>
+            </div>
+            <div class="blue-boxes">
+                <h3>2022</h3>
+                <h4>Kursus Online</h4>
+                <p>Mengikuti berbagai kursus online di Coursera, RevoU, dan Dicoding</p>
+            </div>
+            <div class="blue-boxes">
+                <h3>Sekarang</h3>
+                <h4>Menuju Impian</h4>
+                <p>Persiapan untuk kuliah Teknik Informatika dan mengejar impian bekerja di perusahaan teknologi top</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="content-section fade-in">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <div class="form-header">
+                    <span class="form-icon">✉️</span>
+                    <h3>Kirim Pesan</h3>
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Masukkan pesan Anda" required></textarea>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Kirim Pesan</span>
+                        <span class="btn-icon">➤</span>
+                    </button>
+                </form>
+            </div>
+            <div class="form-output" id="formOutput">
+                <div class="output-header">
+                    <span class="output-icon">📋</span>
+                    <h3>Output Form</h3>
+                </div>
+                <p>Data yang Anda masukkan akan muncul di sini.</p>
+                <div id="outputResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">🚀</span>
+                Yoo's Space
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="profile.html">My Profile</a>
+                <a href="index.html#section3">Contact</a>
+                <a href="https://revou.co" target="_blank">RevoU</a>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Yoo's Space. Dibuat dengan <span class="heart">❤️</span> sebagai tugas RevoU.</p>
+            <p>Terima kasih telah mengunjungi website saya!</p>
+        </div>
+    </footer>
+    
+    <!-- Tombol Scroll to Top -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>

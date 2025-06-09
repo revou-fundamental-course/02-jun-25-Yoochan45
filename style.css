@@ -847,3 +847,246 @@ footer {
         justify-content: center;
     }
 }
+/* Media queries untuk responsivitas mobile */
+@media (max-width: 768px) {
+    /* Header responsif */
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .nav-menu {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .theme-toggle {
+        margin-top: 15px;
+    }
+    
+    /* Layout tiga kolom menjadi satu kolom di mobile */
+    .three-column-layout {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    
+    .left-box, .right-box, .avatar-section {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    /* Urutan elemen di mobile */
+    .avatar-section {
+        order: 1;
+    }
+    
+    .left-box {
+        order: 2;
+    }
+    
+    .right-box {
+        order: 3;
+    }
+    
+    /* Metal container responsif */
+    .metal-container {
+        flex-wrap: wrap;
+        padding: 0 15px;
+    }
+    
+    .metal-box {
+        flex: 1 1 45%;
+        margin: 5px;
+        font-size: 0.9rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    /* About dan project container responsif */
+    .about-project-container {
+        flex-direction: column;
+    }
+    
+    .about-image, .project-image, .about-text, .project-text {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .about-image, .project-image {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    /* Form responsif */
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-form, .form-output {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Footer responsif */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    
+    /* Skill badges responsif */
+    .skill-badges {
+        justify-content: center;
+    }
+    
+    /* Slider responsif */
+    .slider {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .slide {
+        height: 250px;
+    }
+    
+    /* Content section padding */
+    .content-section {
+        padding: 15px;
+    }
+}
+
+/* Media queries untuk perangkat sangat kecil */
+@media (max-width: 480px) {
+    .metal-box {
+        flex: 1 1 100%;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
+/* Tambahan untuk menu hamburger di mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Media query untuk menu hamburger */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #1e3a8a;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding: 50px 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .header-container {
+        position: relative;
+        padding: 15px 20px;
+    }
+}
+/* Fix untuk slider di mobile */
+@media (max-width: 768px) {
+    .slider {
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+    
+    .prev, .next {
+        font-size: 1.5rem;
+        padding: 5px 8px;
+    }
+    
+    /* Fix untuk metal-box di mobile */
+    .metal-box {
+        padding: 1rem 0.5rem;
+        letter-spacing: 0;
+    }
+    
+    /* Fix untuk form di mobile */
+    .form-group input, .form-group textarea {
+        font-size: 16px; /* Mencegah zoom pada iOS saat focus input */
+    }
+    
+    /* Fix untuk scroll-to-top di mobile */
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

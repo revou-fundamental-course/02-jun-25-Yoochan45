@@ -68,29 +68,67 @@ function setupContactForm() {
             
             // Ambil nilai dari input
             const name = document.getElementById('name').value;
-            const date = document.getElementById('date').value;
-            const address = document.getElementById('address').value;
+            const email = document.getElementById('email') ? document.getElementById('email').value : '';
+            const date = document.getElementById('date') ? document.getElementById('date').value : '';
+            const address = document.getElementById('address') ? document.getElementById('address').value : '';
+            const message = document.getElementById('message') ? document.getElementById('message').value : '';
             
-            // Format tanggal agar lebih mudah dibaca
-            const formattedDate = new Date(date).toLocaleDateString('id-ID', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
+            // Buat output HTML
+            let outputHTML = '';
             
-            // Tampilkan output di container form-output
-            outputResult.innerHTML = `
+            // Tambahkan nama
+            outputHTML += `
                 <div class="output-item">
                     <strong>Nama:</strong> ${name}
                 </div>
-                <div class="output-item">
-                    <strong>Tanggal:</strong> ${formattedDate}
-                </div>
-                <div class="output-item">
-                    <strong>Alamat:</strong> ${address}
-                </div>
             `;
+            
+            // Tambahkan email jika ada
+            if (email) {
+                outputHTML += `
+                    <div class="output-item">
+                        <strong>Email:</strong> ${email}
+                    </div>
+                `;
+            }
+            
+            // Tambahkan tanggal jika ada
+            if (date) {
+                // Format tanggal agar lebih mudah dibaca
+                const formattedDate = new Date(date).toLocaleDateString('id-ID', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                outputHTML += `
+                    <div class="output-item">
+                        <strong>Tanggal:</strong> ${formattedDate}
+                    </div>
+                `;
+            }
+            
+            // Tambahkan alamat jika ada
+            if (address) {
+                outputHTML += `
+                    <div class="output-item">
+                        <strong>Alamat:</strong> ${address}
+                    </div>
+                `;
+            }
+            
+            // Tambahkan pesan jika ada
+            if (message) {
+                outputHTML += `
+                    <div class="output-item">
+                        <strong>Pesan:</strong> ${message}
+                    </div>
+                `;
+            }
+            
+            // Tampilkan output di container form-output
+            outputResult.innerHTML = outputHTML;
             
             // Reset form
             contactForm.reset();
@@ -228,4 +266,31 @@ function setupHeader() {
 // Panggil fungsi setupHeader saat DOM sudah dimuat
 document.addEventListener('DOMContentLoaded', function() {
     setupHeader();
+});
+// ===== KODE UNTUK MENU MOBILE =====
+function setupMobileMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle && navMenu) {
+        // Toggle menu saat tombol hamburger diklik
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Tutup menu saat link di klik
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+}
+
+// Panggil fungsi setupMobileMenu saat DOM sudah dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    setupMobileMenu();
 });
