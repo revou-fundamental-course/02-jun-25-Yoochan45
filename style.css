@@ -1090,3 +1090,77 @@ footer {
         height: 40px;
     }
 }
+/* Perbaikan responsivitas untuk mobile */
+@media (max-width: 480px) {
+    /* Perbaikan untuk metal-box */
+    .metal-container {
+        flex-wrap: wrap;
+    }
+    
+    .metal-box {
+        flex: 1 1 40%;
+        margin: 5px;
+        font-size: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    /* Perbaikan untuk form */
+    .contact-container {
+        padding: 0;
+    }
+    
+    .contact-form, .form-output {
+        padding: 15px;
+    }
+    
+    /* Perbaikan untuk three-column-layout */
+    .three-column-layout {
+        padding: 0 10px;
+    }
+    
+    /* Perbaikan untuk content-section */
+    .content-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    /* Perbaikan untuk footer */
+    .footer-content, .footer-bottom {
+        padding: 0 15px;
+    }
+    
+    /* Perbaikan untuk slider */
+    .slider {
+        margin: 10px;
+    }
+    
+    /* Perbaikan untuk skill badges */
+    .skill-badges {
+        flex-wrap: wrap;
+    }
+    
+    .skill-badge {
+        margin: 3px;
+        font-size: 0.8rem;
+    }
+}
+/* Tema terang/gelap */
+body {
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+body.light-theme {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+}
+
+/* Pastikan elemen lain tidak berubah di tema terang */
+body.light-theme .content-section,
+body.light-theme .blue-boxes,
+body.light-theme .metal-box,
+body.light-theme .avatar-section,
+body.light-theme .form-output,
+body.light-theme .contact-form {
+    /* Mempertahankan warna asli */
+    background-color: inherit;
+    background-image: inherit;
+}

@@ -200,6 +200,16 @@ function setupHeader() {
     const header = document.querySelector('.sticky-header');
     const themeToggle = document.querySelector('.theme-toggle');
     
+    // Cek preferensi tema dari localStorage
+    const isLightTheme = localStorage.getItem('lightTheme') === 'true';
+    if (isLightTheme) {
+        document.body.classList.add('light-theme');
+        themeToggle.classList.add('active');
+        const icon = themeToggle.querySelector('i');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+    
     // Fungsi untuk mengubah tampilan header saat scroll
     function updateHeaderOnScroll() {
         if (window.scrollY > 50) {
@@ -213,11 +223,14 @@ function setupHeader() {
         }
     }
     
-    // Fungsi untuk toggle tema gelap/terang (placeholder)
+    // Fungsi untuk toggle tema gelap/terang
     function toggleTheme() {
         themeToggle.classList.toggle('active');
-        // Di sini bisa ditambahkan kode untuk benar-benar mengubah tema
-        // Misalnya dengan menambahkan/menghapus class pada body
+        document.body.classList.toggle('light-theme');
+        
+        // Simpan preferensi tema di localStorage
+        const isLightTheme = document.body.classList.contains('light-theme');
+        localStorage.setItem('lightTheme', isLightTheme);
         
         // Animasi toggle icon
         const icon = themeToggle.querySelector('i');
