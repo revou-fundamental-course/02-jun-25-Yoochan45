@@ -325,36 +325,6 @@ p {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-/* 
- * PENJELASAN EFEK LOGAM PADA CONTAINER
- * 
- * 1. Container (.metal-container):
- *    - Menggunakan flexbox untuk membuat layout horizontal
- *    - Gap diatur 0 agar semua box menyambung seperti panel logam
- *    - Lebar maksimum dibatasi agar tidak terlalu lebar di layar besar
- *
- * 2. Box Logam (.metal-box):
- *    - Gradient diagonal (145deg) menciptakan efek kilau seperti permukaan logam
- *    - Border tipis (1px) dengan warna #444 memberikan kesan tepi logam
- *    - Box-shadow ganda:
- *      a. Inset shadow di bagian atas (inset 0 1px 0) menciptakan highlight tipis
- *         seperti pantulan cahaya pada permukaan logam
- *      b. Outer shadow (0 5px 15px) memberikan kedalaman dan dimensi
- *    - Letter-spacing dan text-transform membuat teks terlihat seperti ukiran pada logam
- *
- * 3. Efek Hover:
- *    - Transform translateY(-3px) membuat box "terangkat" saat cursor di atasnya
- *    - Gradient berubah menjadi lebih terang untuk efek aktivasi
- *    - Bayangan lebih besar dan lebih gelap untuk memperkuat efek melayang
- *
- * 4. Efek Active (saat diklik):
- *    - Transform translateY(2px) membuat box "tertekan" ke bawah
- *    - Bayangan mengecil untuk memberikan kesan box ditekan ke dalam
- *    - Kombinasi ini menciptakan efek tombol fisik yang realistis
- *
- * Teknik ini menggunakan kombinasi gradient, bayangan, dan transformasi
- * untuk menciptakan ilusi visual material logam yang responsif terhadap interaksi.
- */
 /* Styling untuk section Tentang Saya dan Proyek */
 .about-project-container {
     display: flex;
